@@ -60,7 +60,9 @@ export default function Features() {
                 <h4 className="text-left mb-2 font-semibold font-serif text-xl leading-6 text-gray-800" style={{ maxWidth: 224 }}>
                   {item.title}
                 </h4>
-                <p className="text-sm leading-5 font-normal text-gray-700 w-9/12">{item.desc}</p>
+                <p className="text-sm leading-5 font-normal text-gray-700 font-serif" style={{ maxWidth: 214 }}>
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}

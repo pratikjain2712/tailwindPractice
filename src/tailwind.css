@@ -37,14 +37,28 @@
   background-color: #f3f4f6;
   z-index: 0;
 }
+
 .featureSection {
   clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  position: relative;
 }
 
-.w24{
+.featureSection:after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 0;
+  top: 225px;
+  display: block;
+  background: url(/Path.png) no-repeat;
+  z-index: -1;
+}
+
+.w24 {
   width: calc(25% - 12px);
 }
-.w48{
+.w48 {
   width: calc(50% - 24px);
 }
 
