@@ -4,6 +4,7 @@ import Features from "./components/Features";
 // import logo from "./logo.png";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Status from "./components/Status";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Hero />
       <Features />
+      <Status />
     </Fragment>
   );
 }

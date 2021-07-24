@@ -55,8 +55,34 @@
   z-index: -1;
 }
 
+.statusSection:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 404px;
+  height: calc(100% - 48px);
+  top: 48px;
+  background: url(/Path2.png) repeat;
+  z-index: 1;
+  left: -18%;
+  background-position: top left;
+}
+
+.featureCol3 {
+  /* min-height: 538px; */
+  /* place-content: space-between; */
+}
+.featureCol3 > :nth-child(1) {
+  grid-column: span 2;
+}
+
+.featureCol3 > :nth-child(2) {
+  place-content: center;
+  /* height: 260px; */
+}
+
 .w24 {
-  width: calc(25% - 12px);
+  width: calc(25% - 16px);
 }
 .w48 {
   width: calc(50% - 24px);

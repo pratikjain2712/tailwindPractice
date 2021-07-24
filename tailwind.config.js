@@ -7,6 +7,8 @@ module.exports = {
   theme: {
     borderRadius: {
       xl: "0.75rem",
+      lg: "0.5rem",
+      md: "0.38rem",
     },
     extend: {
       fontSize: {
