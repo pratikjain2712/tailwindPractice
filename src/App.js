@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Status from "./components/Status";
 import Pricing from "./components/Pricing";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Features />
       <Status />
       <Pricing />
+      <FAQ />
     </Fragment>
   );
 }
