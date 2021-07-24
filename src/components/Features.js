@@ -1,6 +1,6 @@
 import React from "react";
 
-const cardDetails = [
+const col1 = [
   {
     image: "EmailIcon.svg",
     title: "Email Notification",
@@ -11,6 +11,8 @@ const cardDetails = [
     title: "Rich Domain Model",
     desc: "Targetprocess has a rich domain model with several different types of entities. These entities can be customized to fit your process.",
   },
+];
+const col2 = [
   {
     image: "chat.svg",
     title: "Comments & Mentions",
@@ -21,13 +23,15 @@ const cardDetails = [
     title: "Multi-Language Support",
     desc: "We support English, French, German, Spanish, Portuguese (the Brazilian variety), Russian languages to allow you to use Targetprocess in your native language",
   },
+];
+
+const col3 = [
   {
     image: "team.png",
     horizontal: true,
     title: "Multiple Teams Support",
     desc: "Allow multiple teams to collaborate more effectively when delivering project(s) together. Help project members see how their work contributes to the bigger picture.",
   },
-
   {
     image: "share.svg",
     title: "Share Views",
@@ -39,6 +43,25 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+function Card({ image, horizontal, title, desc }) {
+  return (
+    <div className={classNames(horizontal ? "flex space-x-10" : "grid", "p-8 bg-white rounded-xl")}>
+      <img
+        src={`${image}`}
+        alt={image}
+        className={classNames(horizontal ? "mb-0" : "block mb-6")}
+        style={{ width: horizontal ? 272 : 32, height: horizontal ? 190 : 32 }}
+      ></img>
+      <div>
+        <h4 className="text-left mb-2 font-semibold font-serif text-xl leading-6 text-gray-800" style={{ maxWidth: 224 }}>
+          {title}
+        </h4>
+        <p className="text-sm leading-5 font-normal text-gray-700 mr-3 font-serif">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Features() {
   return (
     <section className="featureSection bg-gray-900 py-48">
@@ -46,27 +69,22 @@ export default function Features() {
         Features
       </p>
       <h3 className="text-center mb-10 font-extrabold text-5.5xl text-white">A better way to send money</h3>
-      <div className="container mx-auto">
-        <div className="flex items-start gap-6 relative" style={{ maxHeight: 590, flexFlow: "column wrap" }}>
-          {cardDetails.map((item) => (
-            <div className={classNames(item.horizontal ? "flex space-x-10 w48" : "w24 ", "p-8 bg-white rounded-xl")}>
-              <img
-                src={`${item.image}`}
-                alt={item.icon}
-                className={classNames(item.horizontal ? "mb-0" : "block mb-6")}
-                style={{ width: item.horizontal ? 272 : 32, height: item.horizontal ? 190 : 32 }}
-              ></img>
-              <div>
-                <h4 className="text-left mb-2 font-semibold font-serif text-xl leading-6 text-gray-800" style={{ maxWidth: 224 }}>
-                  {item.title}
-                </h4>
-                <p className="text-sm leading-5 font-normal text-gray-700 font-serif" style={{ maxWidth: 214 }}>
-                  {item.desc}
-                </p>
-              </div>
-            </div>
+      <div className="mx-auto flex" style={{ maxWidth: 1216 }}>
+        <div className="w24 mx-auto grid items-stretch row-gap-6">
+          {col1.map((item) => (
+            <Card image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
           ))}
-          <div className="w24 pb-16 pt-8 px-8 bg-transparent absolute right-0 bottom-0">
+        </div>
+        <div className="w24 mx-auto grid items-stretch row-gap-6">
+          {col2.map((item) => (
+            <Card image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
+          ))}
+        </div>
+        <div className="w48 relative mx-auto grid grid-cols-2 featureCol3 items-stretch row-gap-6">
+          {col3.map((item) => (
+            <Card image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
+          ))}
+          <div className="px-8 py-7 bg-transparent flex items-center flex-col justify-center">
             <img src="updates.svg" alt="update" className="mx-auto mb-4 relative" style={{ left: -6 }}></img>
             <div>
               <h4 className="text-center mb-3 font-semibold font-serif text-xl leading-7 text-white mx-auto" style={{ maxWidth: 224 }}>
