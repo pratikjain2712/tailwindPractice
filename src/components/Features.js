@@ -71,18 +71,18 @@ export default function Features() {
       <h3 className="text-center mb-10 font-extrabold text-5.5xl text-white">A better way to send money</h3>
       <div className="mx-auto flex" style={{ maxWidth: 1216 }}>
         <div className="w24 mx-auto grid items-stretch row-gap-6">
-          {col1.map((item) => (
-            <Card image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
+          {col1.map((item, key) => (
+            <Card key={`col1-${key}`} image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
           ))}
         </div>
         <div className="w24 mx-auto grid items-stretch row-gap-6">
-          {col2.map((item) => (
-            <Card image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
+          {col2.map((item, key) => (
+            <Card key={`col1-${key}`} image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
           ))}
         </div>
         <div className="w48 relative mx-auto grid grid-cols-2 featureCol3 items-stretch row-gap-6">
-          {col3.map((item) => (
-            <Card image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
+          {col3.map((item, key) => (
+            <Card key={`col1-${key}`} image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
           ))}
           <div className="px-8 py-7 bg-transparent flex items-center flex-col justify-center">
             <img src="updates.svg" alt="update" className="mx-auto mb-4 relative" style={{ left: -6 }}></img>

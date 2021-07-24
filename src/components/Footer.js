@@ -116,8 +116,8 @@ function Menu({ title, list }) {
     <div className={"flex flex-col gap-4"}>
       <h5 className="text-left uppercase font-semibold font-sans text-sm leading-5 tracking-wider text-gray-400">{title}</h5>
       <ul className="text-left font-normal font-sans text-base leading-6">
-        {list.map((l) => (
-          <li className="mb-4">
+        {list.map((l, key) => (
+          <li className="mb-4" key={`list-${key}`}>
             <a href={l.href} title={l.name} className="text-gray-200 hover:text-white">
               {l.name}
             </a>
@@ -143,8 +143,8 @@ export default function Footer() {
                 Making the world a better place through constructing elegant hierarchies.
               </p>
               <ul className="flex gap-5">
-                {socials.map((l) => (
-                  <li className="mr-2">
+                {socials.map((l, key) => (
+                  <li className="mr-2" key={`social-link-${key}`}>
                     <a href={l.href} title={l.name}>
                       <img src={`/socials/${l.name}.svg`} alt={l.name} className="h-5 w-5"></img>
                     </a>
@@ -152,8 +152,8 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            {footerLinks.map((menu) => (
-              <Menu title={menu.title} list={menu.menu}></Menu>
+            {footerLinks.map((menu, key) => (
+              <Menu key={`footer-col-${key}`} title={menu.title} list={menu.menu}></Menu>
             ))}
           </Fragment>
         </div>

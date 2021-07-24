@@ -3,7 +3,7 @@ import React from "react";
 const AccordionItem = ({ showDescription, ariaExpanded, fontWeightBold, item, index, onClick }) => (
   <div
     className="faq__question py-6 cursor-pointer"
-    key={item.question}
+    key={item.index}
     aria-expanded={ariaExpanded}
     aria-controls={`faq${index + 1}_desc`}
     data-qa="faq__question-button"
