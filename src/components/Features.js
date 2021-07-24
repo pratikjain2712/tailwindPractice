@@ -64,7 +64,7 @@ function Card({ image, horizontal, title, desc }) {
 
 export default function Features() {
   return (
-    <section className="featureSection bg-gray-900 py-48">
+    <section className="featureSection bg-gray-900 py-48 relative">
       <p className="text-lg mb-4 leading-tight font-serif font-bold uppercase text-transparent bg-clip-text text-center linearGradient">
         Features
       </p>

@@ -13,7 +13,7 @@ export default function Status() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus, cum deleniti sunt in
             labore nihil quod quibusdam expedita nemo.
           </p>
-          <div className="pl-2 max-w-xl mr-12 flex gap-4">
+          <div className="max-w-xl mr-12 flex gap-4">
             <div className="h-12 w-12 bg-gray-900 grid items-center justify-center rounded-lg" style={{ minWidth: 48 }}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
@@ -32,7 +32,7 @@ export default function Status() {
               </p>
             </div>
           </div>
-          <div className="pl-2 max-w-xl mr-12 flex gap-4">
+          <div className="max-w-xl mr-12 flex gap-4">
             <div className="h-12 w-12 bg-gray-900 grid items-center justify-center rounded-lg" style={{ minWidth: 48 }}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" viewBox="0 0 24 24" stroke="currentColor">
                 <path
