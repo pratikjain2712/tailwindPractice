@@ -40,7 +40,11 @@
 
 .featureSection {
   clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
-  position: relative;
+}
+
+.footerSection {
+  padding-top: 184px;
+  clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .featureSection:after {

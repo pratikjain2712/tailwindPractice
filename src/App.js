@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Status from "./components/Status";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Status />
       <Pricing />
       <FAQ />
+      <Footer />
     </Fragment>
   );
 }
