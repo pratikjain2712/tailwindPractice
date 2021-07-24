@@ -80,6 +80,17 @@
   place-content: center;
   /* height: 260px; */
 }
+.pricingSection {
+  /* clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 70%); */
+  background: rgb(243, 244, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(243, 244, 246, 1) 0%,
+    rgba(243, 244, 246, 1) 70%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 
 .w24 {
   width: calc(25% - 16px);
