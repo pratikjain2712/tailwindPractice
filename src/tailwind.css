@@ -1,0 +1,212 @@
+@tailwind base;
+
+@tailwind components;
+
+.react-date-picker__wrapper {
+  border: none !important;
+}
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.linearGradient {
+  background-image: linear-gradient(135deg, #b16cea 33.85%, #ff5e69 55.21%, #ff8a56 78.12%, #ffa84b 100%);
+}
+.heroTextContainer {
+  max-width: 600px;
+}
+
+.pricingSection {
+  /* clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 70%); */
+  background: rgb(243, 244, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(243, 244, 246, 1) 0%,
+    rgba(243, 244, 246, 1) 55%,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #ccc;
+  border-color: #ccc transparent #ccc transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.faq__desc.show-description {
+  height: auto;
+}
+
+.faq__question:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq__desc {
+  height: 0;
+  overflow: hidden;
+  transition: all 200ms ease-out;
+}
+.heroButton {
+  top: 6px;
+  left: 6px;
+  right: -6px;
+}
+.footerSection {
+  padding: 50px 15px 0px;
+}
+
+.featureCol3 :nth-child(2) {
+  order: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .heroSection:after {
+    content: "";
+    position: absolute;
+    width: 398px;
+    height: 413px;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    background-color: #f3f4f6;
+    z-index: 0;
+  }
+  .featureSection {
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  }
+  .featureCol3 :nth-child(2) {
+    order: unset;
+  }
+  .statusSection:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 404px;
+    height: 404px;
+    top: 46%;
+    transform: translateY(-50%);
+    background: url(/Path2.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    left: -10%;
+    background-position: top left;
+  }
+  .pricingSection {
+    background: rgb(243, 244, 246);
+    background: linear-gradient(
+      180deg,
+      rgba(243, 244, 246, 1) 0%,
+      rgba(243, 244, 246, 1) 65%,
+      rgba(255, 255, 255, 1) 65%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+  .heroButton {
+    left: 26px;
+  }
+  .featureSection > div {
+    max-width: 592px;
+  }
+  .footerSection {
+    padding: 184px 0 0 0;
+    clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .footerSection > div {
+    max-width: 42rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .heroSection:after {
+    width: 398px;
+    height: 413px;
+    right: 0px;
+  }
+  .statusSection:after {
+    background-repeat: repeat;
+    left: -13%;
+    height: calc(100% - 48px);
+    top: 48px;
+    /* top: 50%; */
+    transform: translateY(-48px);
+  }
+  .footerSection > div {
+    max-width: 911px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heroSection:after {
+    width: 640px;
+    height: 546px;
+    right: -140px;
+  }
+  .statusSection:after {
+    background-repeat: repeat;
+    left: -14%;
+    height: calc(100% - 48px);
+    top: 48px;
+    /* top: 50%; */
+    transform: translateY(-48px);
+  }
+  .footerSection > div {
+    max-width: 1216px;
+  }
+  .featureSection {
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+  .featureSection > div {
+    max-width: 1216px;
+  }
+  .featureSection:after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0;
+    top: 225px;
+    display: block;
+    background: url(/Path.png) no-repeat;
+    z-index: -1;
+  }
+
+  .featureCol3 > :nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .featureCol3 > :nth-child(2) {
+    place-content: center;
+  }
+  .w24 {
+    width: calc(25% - 16px);
+  }
+  .w48 {
+    width: calc(50% - 24px);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@tailwind utilities;
