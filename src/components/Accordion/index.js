@@ -23,7 +23,7 @@ const Accordion = ({ questionsAnswers }) => {
     );
   });
 
-  return <dl className="faq__list">{renderedQuestionsAnswers}</dl>;
+  return <dl className="faq__list container mx-auto md:max-w-2xl lg:max-w-full">{renderedQuestionsAnswers}</dl>;
 };
 
 export default Accordion;

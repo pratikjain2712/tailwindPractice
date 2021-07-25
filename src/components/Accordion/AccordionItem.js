@@ -27,7 +27,7 @@ const AccordionItem = ({ showDescription, ariaExpanded, fontWeightBold, item, in
       <p
         id={`faq${index + 1}_desc`}
         data-qa="faq__desc"
-        className={`faq__desc ${showDescription} text-base leading-7 font-normal text-gray-500 font-sans ${showDescription && "mt-2"}`}
+        className={`faq__desc ${showDescription} pr-8 lg:pr-0 text-base leading-7 font-normal text-gray-500 font-sans ${showDescription && "mt-2"}`}
       >
         {item.answer}
       </p>
