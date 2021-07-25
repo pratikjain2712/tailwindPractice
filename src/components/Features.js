@@ -45,7 +45,7 @@ function classNames(...classes) {
 
 function Card({ image, horizontal, title, desc }) {
   return (
-    <div className={classNames(horizontal ? "flex sm:space-x-10 sm:col-span-2 flex-col sm:flex-row" : "grid", "p-8 bg-white rounded-xl")}>
+    <div className={classNames(horizontal ? "flex sm:space-x-10 sm:col-span-2 flex-col-reverse  sm:flex-row" : "grid", "p-8 bg-white rounded-xl")}>
       <img
         src={`${image}`}
         alt={image}
@@ -55,7 +55,7 @@ function Card({ image, horizontal, title, desc }) {
       <div className={`${horizontal && "mt-8 sm:mt-0"}`}>
         <h4
           className={`max-w-xs text-left font-semibold font-serif text-xl leading-6 text-gray-800 ${
-            horizontal ? "mb-2" : "mt-2 mb-5 sm:mt-0 sm:mb-2 ml-12 sm:ml-0 pl-3 sm:pl-0"
+            horizontal ? "mb-2" : "mt-1 mb-5 sm:mt-0 sm:mb-2 ml-12 sm:ml-0 pl-2 sm:pl-0"
           } `}
         >
           {title}
