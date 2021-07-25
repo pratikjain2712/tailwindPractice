@@ -1,15 +1,10 @@
 import React from "react";
-import { Fragment } from "react";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Hero() {
   return (
     <section className="bg-white md:py-12 lg:py-32 flex  container mx-auto heroSection md:overflow-hidden relative items-center">
       <div className="max-w-2xl lg:max-w-4xl xl:max-w-full flex md:items-center container mx-auto md:justify-between flex-col-reverse md:flex-row gap-0 lg:gap-12 xl:gap-8">
-        <div className="heroTextContainer md:w-3/6 px-4 md:px-0 pt-12 md:pt-0">
+        <div className="heroTextContainer md:w-3/6 px-4 md:px-0 pt-12 md:pt-0 pb-16 sm:pb-0">
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-9 lg:leading-10 xl:leading-12 text-gray-900 lg:h-24 xl:h-32  lg:flex lg:flex-col lg:justify-between">
             Data to enrich your
             <span className="text-transparent bg-clip-text linearGradient"> online business</span>
@@ -31,7 +26,6 @@ export default function Hero() {
                 <button
                   className="relative border-box w-full bg-gray-900 py-2 px-4 z-10 rounded-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white hover:shadow-xl"
                   type="button"
-                  // style={{ width: "inherit" }}
                 >
                   Start free trial
                 </button>
@@ -42,7 +36,7 @@ export default function Hero() {
           <p className="mt-3 text-sm font-serif font-medium leading-7 text-gray-500 pr-3">
             <span>We care about the protection of your data. Read our </span>
             <a href="#" className="underline text-gray-900 font-medium">
-               Privacy Policy
+              Privacy Policy
             </a>
             .
           </p>

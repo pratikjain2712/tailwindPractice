@@ -45,18 +45,22 @@ function classNames(...classes) {
 
 function Card({ image, horizontal, title, desc }) {
   return (
-    <div className={classNames(horizontal ? "flex space-x-10" : "grid", "p-8 bg-white rounded-xl")}>
+    <div className={classNames(horizontal ? "flex sm:space-x-10 sm:col-span-2 flex-col sm:flex-row" : "grid", "p-8 bg-white rounded-xl")}>
       <img
         src={`${image}`}
         alt={image}
-        className={classNames(horizontal ? "mb-0" : "block mb-6")}
+        className={classNames(horizontal ? "mb-0 mx-auto sm:m-0" : "block mb-6 absolute sm:relative")}
         style={{ width: horizontal ? 272 : 32, height: horizontal ? 190 : 32 }}
       ></img>
-      <div>
-        <h4 className="text-left mb-2 font-semibold font-serif text-xl leading-6 text-gray-800" style={{ maxWidth: 224 }}>
+      <div className={`${horizontal && "mt-8 sm:mt-0"}`}>
+        <h4
+          className={`max-w-xs text-left font-semibold font-serif text-xl leading-6 text-gray-800 ${
+            horizontal ? "mb-2" : "mt-2 mb-5 sm:mt-0 sm:mb-2 ml-12 sm:ml-0 pl-3 sm:pl-0"
+          } `}
+        >
           {title}
         </h4>
-        <p className="text-sm leading-5 font-normal text-gray-700 mr-3 font-serif">{desc}</p>
+        <p className="text-sm leading-5 font-normal text-gray-700 mr-8 sm:mr-3 font-serif">{desc}</p>
       </div>
     </div>
   );
@@ -64,12 +68,12 @@ function Card({ image, horizontal, title, desc }) {
 
 export default function Features() {
   return (
-    <section className="featureSection bg-gray-900 py-48 relative">
+    <section className="featureSection bg-gray-900 py-16 sm:py-32 xl:py-48 relative px-5 sm:px-0">
       <p className="text-lg mb-4 leading-tight font-serif font-bold uppercase text-transparent bg-clip-text text-center linearGradient">
         Features
       </p>
-      <h3 className="text-center mb-10 font-extrabold text-5.5xl text-white">A better way to send money</h3>
-      <div className="mx-auto flex" style={{ maxWidth: 1216 }}>
+      <h3 className="text-center mb-10 font-extrabold text-2xl sm:text-3xl xl:text-5.5xl text-white">A better way to send money</h3>
+      <div className="mx-auto flex flex-col sm:grid sm:grid-cols-2 xl:flex xl:flex-row gap-6 xl:gap-0">
         <div className="w24 mx-auto grid items-stretch row-gap-6">
           {col1.map((item, key) => (
             <Card key={`col1-${key}`} image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
@@ -80,18 +84,20 @@ export default function Features() {
             <Card key={`col1-${key}`} image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
           ))}
         </div>
-        <div className="w48 relative mx-auto grid grid-cols-2 featureCol3 items-stretch row-gap-6">
+        <div className="w48 sm:col-span-2 sm:relative mx-auto grid grid-cols-1 xl:grid-cols-2 featureCol3 items-stretch row-gap-6">
           {col3.map((item, key) => (
             <Card key={`col1-${key}`} image={item.image} horizontal={item.horizontal} title={item.title} desc={item.desc}></Card>
           ))}
-          <div className="px-8 py-7 bg-transparent flex items-center flex-col justify-center">
+          <div className="px-8 py-7 bg-transparent flex items-center flex-col-reverse sm:flex-col justify-center">
             <img src="updates.svg" alt="update" className="mx-auto mb-4 relative" style={{ left: -6 }}></img>
             <div>
               <h4 className="text-center mb-3 font-semibold font-serif text-xl leading-7 text-white mx-auto" style={{ maxWidth: 224 }}>
                 More Updates, Features & Articles are here.
               </h4>
               <p className="text-base font-semibold font-serif text-center leading-5 text-transparent bg-clip-text linearGradient">
-                www.neeto.com
+                <a href="#" title="Learn More">
+                  Learn More
+                </a>
               </p>
             </div>
           </div>

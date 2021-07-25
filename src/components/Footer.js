@@ -111,9 +111,9 @@ const socials = [
   },
 ];
 
-function Menu({ title, list }) {
+function Menu({ title, list, index }) {
   return (
-    <div className={"flex flex-col gap-4"}>
+    <div className={`flex flex-col gap-4 ${index > 1 && "mt-4 sm:mt-0"}`}>
       <h5 className="text-left uppercase font-semibold font-sans text-sm leading-5 tracking-wider text-gray-400">{title}</h5>
       <ul className="text-left font-normal font-sans text-base leading-6">
         {list.map((l, key) => (
@@ -131,8 +131,8 @@ function Menu({ title, list }) {
 export default function Footer() {
   return (
     <footer className="footerSection bg-gray-900">
-      <div style={{ maxWidth: 1216 }} className="mx-auto">
-        <div className="grid grid-cols-6 col-gap-8 pb-12">
+      <div className="mx-auto px-4 sm:px-0 ">
+        <div className="grid grid-cols-2 md:grid-cols-6 col-gap-8 pb-12 row-gap-8">
           <Fragment>
             <div className="col-span-2">
               <div className="flex-shrink-0 flex items-center mb-8">
@@ -153,12 +153,12 @@ export default function Footer() {
               </ul>
             </div>
             {footerLinks.map((menu, key) => (
-              <Menu key={`footer-col-${key}`} title={menu.title} list={menu.menu}></Menu>
+              <Menu key={`footer-col-${key}`} index={key} title={menu.title} list={menu.menu}></Menu>
             ))}
           </Fragment>
         </div>
         <p
-          className="text-base text-center leading-6 font-normal text-gray-400 font-sans pt-8 pb-16 border-gray-700"
+          className="text-base text-center leading-6 font-normal text-gray-400 font-sans pt-8 pb-12 md:pb-16 border-gray-700"
           style={{ borderTop: "1px solid" }}
         >
           &copy; 2020 Workflow, Inc. All rights reserved.
