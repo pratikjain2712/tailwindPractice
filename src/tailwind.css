@@ -16,27 +16,6 @@
 .heroTextContainer {
   max-width: 600px;
 }
-.heroButton {
-  top: 6px;
-  left: 6px;
-}
-
-.heroSection {
-  /* height: calc(100vh - 76px); */
-  height: 642px;
-}
-
-.heroSection:after {
-  content: "";
-  position: absolute;
-  width: 640px;
-  height: 546px;
-  right: -140px;
-  top: calc(50% - 546px / 2);
-  display: block;
-  background-color: #f3f4f6;
-  z-index: 0;
-}
 
 .featureSection {
   clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
@@ -129,6 +108,45 @@
   height: 0;
   overflow: hidden;
   transition: all 200ms ease-out;
+}
+.heroButton {
+  top: 6px;
+  left: 6px;
+  right: -6px;
+}
+
+@media screen and (min-width: 768px) {
+  .heroSection:after {
+    content: "";
+    position: absolute;
+    width: 398px;
+    height: 413px;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    background-color: #f3f4f6;
+    z-index: 0;
+  }
+  .heroButton {
+    left: 26px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .heroSection:after {
+    width: 398px;
+    height: 413px;
+    right: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heroSection:after {
+    width: 640px;
+    height: 546px;
+    right: -140px;
+  }
 }
 
 @keyframes lds-dual-ring {
